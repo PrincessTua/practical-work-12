@@ -1,0 +1,21 @@
+using System;
+
+internal class Sittings
+{
+    private static readonly string Part;
+    static Sittings()
+    {
+        Part = "C:\\Program Files\\settings\\config.txt";
+    }
+    public static void See()
+    {
+        Console.WriteLine(Part);
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Sittings.See();
+    }
+}
