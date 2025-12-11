@@ -1,0 +1,35 @@
+using System;
+
+internal class Book
+{
+    private readonly int ISBN;
+    private string Namebook, author;
+    public Book(int iSBN, string nameBook, string author)
+    {
+        ISBN = iSBN;
+        this.Namebook = nameBook;
+        this.author = author;
+    }
+    public string NameBook
+    {
+        get { return Namebook; }
+        set { Namebook = value; }
+    }
+    public string Author
+    {
+        get { return author; }
+        set { author = value; }
+    }
+    public void Info()
+    {
+        Console.WriteLine($"Номер книги: {ISBN}, название: {NameBook}, автор: {author}");
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Book book = new Book(2, "Война и мир", "Л.Н. Толстой");
+        book.Info();
+    }
+}
